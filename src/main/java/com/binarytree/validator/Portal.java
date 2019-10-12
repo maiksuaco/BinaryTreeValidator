@@ -2,7 +2,6 @@ package com.binarytree.validator;
 
 import java.util.Arrays;
 import java.util.NoSuchElementException;
-import java.util.Optional;
 
 public enum Portal {
     PERSONAS("personas"), ASOCIADOS("asociados"), EMPRESAS("empresas"), TMUNDO("tmundo");
@@ -24,3 +23,4 @@ public enum Portal {
         }
     }
 }
+

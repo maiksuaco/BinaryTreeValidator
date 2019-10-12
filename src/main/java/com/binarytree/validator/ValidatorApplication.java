@@ -1,5 +1,6 @@
 package com.binarytree.validator;
 
+import com.binarytree.validator.game.NumericProblem;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,6 +19,9 @@ public class ValidatorApplication implements CommandLineRunner {
 
 	@Autowired
 	BinaryTreeValidator validator;
+
+	@Autowired
+    NumericProblem finder;
 
 	public static void main(String[] args) {
 		SpringApplication.run(ValidatorApplication.class, args);
@@ -39,5 +43,7 @@ public class ValidatorApplication implements CommandLineRunner {
 		LOG.info("Loggin en command line");
 
 		LOG.info( Boolean.toString(validator.isValid(tree, Integer.MIN_VALUE, Integer.MAX_VALUE)));
+
+        LOG.info(finder.findSolutions().toString());
 	}
 }
